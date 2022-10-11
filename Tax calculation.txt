@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+      int n;
+      scanf("%d",&n);
+      if(n<=250000)
+      {
+          printf("0.00");
+      }
+      else if(n>=250001 && n <=500000)
+      {
+          n = n-250000;
+          float a = n*0.05;
+          printf("%.2f",a);
+      }
+      else if(n>=500001 && n<=1000000)
+      {
+           n = n - 500000;
+           float b = n*0.2 + 12500;
+           printf("%.2f",b);
+      }
+      else if(n>=1000001)
+      {
+          n = n - 1000000;
+          float c = n*0.3 + 112500;
+          printf("%.2f",c);
+      }
+}
